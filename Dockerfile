@@ -1,4 +1,4 @@
-FROM codercom/code-server:${IMAGE_TAG}
+FROM codercom/code-server:${BASE_IMAGE}
 
 USER coder
 
