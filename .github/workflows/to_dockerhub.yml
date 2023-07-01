@@ -11,11 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: olegtarasov/get-tag@v2.1.2
-        id: tagName
-        with:
-          tagRegex: "v(.*)"
-
       - uses: actions/checkout@v3
 
       - name: Docker meta
@@ -45,5 +40,3 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=registry,ref=smoothdenis/deploy-code-server:buildcache-devpack
           cache-to: type=registry,ref=smoothdenis/deploy-code-server:buildcache-devpack,mode=max
-          build-args: BASE_IMAGE=${{ steps.tagName.outputs.tag }}
-

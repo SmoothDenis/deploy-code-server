@@ -1,4 +1,4 @@
-FROM codercom/code-server:${BASE_IMAGE}
+FROM codercom/code-server:4.14.1
 
 USER coder
 
